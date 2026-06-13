@@ -1,0 +1,22 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv/
+**/.venv/
+
+# Environment variables / secrets  (never commit API keys: Tavily, etc.)
+.env
+**/.env
+
+# Claude Code local settings (machine-specific)
+.claude/settings.local.json
+**/.claude/settings.local.json
+
+# Jupyter
+.ipynb_checkpoints/
