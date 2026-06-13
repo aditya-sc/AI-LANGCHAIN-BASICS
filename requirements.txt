@@ -1,0 +1,11 @@
+# Single environment for the whole repo. Prefer `uv sync` (uses pyproject.toml +
+# uv.lock); this file is a plain-pip fallback.
+ipykernel
+langchain
+langgraph
+pydantic
+python-dotenv
+langchain-ollama
+langchain-tavily
+langchain-mcp-adapters
+mcp

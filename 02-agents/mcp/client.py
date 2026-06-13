@@ -22,15 +22,15 @@ async def main():
         {
             "math":{
                 # stdio: client launches this process on demand via `command`.
-                # mathserver.py does NOT need to be started beforehand.
+                # math_server.py does NOT need to be started beforehand.
                 "command":"python",
-                "args":["mathserver.py"],
+                "args":["math_server.py"],
                 "transport":"stdio",
             },
             "weather":
             {
                 # streamable_http: connect by url to an already-running server.
-                # Start `python weatherserver.py` first or this will fail.
+                # Start `python weather_server.py` first or this will fail.
                 "url":"http://localhost:8000/mcp",
                 "transport":"streamable_http",
             }

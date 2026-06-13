@@ -4,28 +4,29 @@ Hand-built LangGraph agents and Model Context Protocol (MCP) servers. The
 conceptual backbone for everything here is the repo-root
 [`NOTES.md`](../NOTES.md) — start there.
 
-## Notebooks (`1-BasicChatbot/`)
+## Notebooks (`notebooks/`)
 
-| Notebook                  | Topic                                                              | NOTES.md ref |
-| ------------------------- | ----------------------------------------------------------------- | ------------ |
-| `1-basicchatbot.ipynb`    | `StateGraph` basics → tool node + `tools_condition` loop → `MemorySaver` memory | §2, §3, §5 |
-| `2-humanintheloop.ipynb`  | `interrupt()` + `Command(resume=...)` to pause for a human         | §4, §5       |
+| Notebook                       | Topic                                                              | NOTES.md ref |
+| ------------------------------ | ----------------------------------------------------------------- | ------------ |
+| `01-basic-chatbot.ipynb`       | `StateGraph` basics → tool node + `tools_condition` loop → `MemorySaver` memory | §2, §3, §5 |
+| `02-human-in-the-loop.ipynb`   | `interrupt()` + `Command(resume=...)` to pause for a human         | §4, §5       |
 
-## MCP example (`*.py`)
+## MCP example (`mcp/`)
 
 `create_agent` driven over tools served by two MCP servers — one `stdio`, one
 `streamable_http` (NOTES.md §10 explains the transport difference).
 
 ```bash
-uv sync
+# environment is shared at the repo root (uv sync there first)
+cd 02-agents/mcp
 
 # 1. The HTTP server must be started manually and kept running:
-uv run python weatherserver.py        # serves http://localhost:8000/mcp
+uv run python weather_server.py        # serves http://localhost:8000/mcp
 
-# 2. In another terminal, run the client. It launches mathserver.py itself
-#    (stdio = client-spawned on demand) and connects to the weather server.
+# 2. In another terminal (also in 02-agents/mcp), run the client. It launches
+#    math_server.py itself (stdio = client-spawned) and connects to the weather server.
 uv run python client.py
 ```
 
 MCP tools are **async-only** — the client drives the agent with `await
-agent.ainvoke(...)` (NOTES.md §10). Web search needs `TAVILY_API_KEY` in `.env`.
+agent.ainvoke(...)` (NOTES.md §10). Web search needs `TAVILY_API_KEY` in the root `.env`.

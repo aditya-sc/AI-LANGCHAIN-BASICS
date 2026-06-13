@@ -1,5 +1,5 @@
 # MCP server exposing a weather tool.  (See NOTES.md §10 — MCP servers.)
-# Same FastMCP pattern as mathserver.py, but a *different transport*.
+# Same FastMCP pattern as math_server.py, but a *different transport*.
 from mcp.server.fastmcp import FastMCP
 
 mcp=FastMCP("WeatherServer")

@@ -20,7 +20,7 @@ def multiply(a:int,b:int)->int:
     """
     return a*b
 
-# `__name__ == "__main__"` is True only when run directly (python mathserver.py),
+# `__name__ == "__main__"` is True only when run directly (python math_server.py),
 # False when imported — so the server starts only when this file is the program.
 if __name__=="__main__":
     # stdio transport: the *client* spawns this process on demand (NOTES.md §10).

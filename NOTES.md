@@ -321,8 +321,8 @@ Pydantic for structured output because model text is untrusted (validates/coerce
 
 `__name__` is auto-set by Python:
 
-- run the file directly (`python mathserver.py`) → `__name__ == "__main__"` → block runs.
-- imported by another file → `__name__ == "mathserver"` → block skipped.
+- run the file directly (`python math_server.py`) → `__name__ == "__main__"` → block runs.
+- imported by another file → `__name__ == "math_server"` → block skipped.
   Means "only start the server if this file is the program being run, not when imported."
 
 ### Transports — KEY operational difference
@@ -336,7 +336,7 @@ Pydantic for structured output because model text is untrusted (validates/coerce
 | Sharing                | private per client            | shared by many clients       |
 
 `stdio` = local launch-on-demand tools. HTTP = shared/remote services that must be
-up independently (start `weatherserver.py` first, then `client.py`).
+up independently (start `weather_server.py` first, then `client.py`).
 
 ### MCP tools are async-only
 
