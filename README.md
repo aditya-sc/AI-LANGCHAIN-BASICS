@@ -16,11 +16,12 @@ comments throughout both folders cross-reference its sections.
 | --------------------------- | --------------------------------------------------------------------------------------------------- |
 | [`01-basics/`](./01-basics) | LangChain v1 fundamentals as notebooks: models, streaming/batch, messages, tools, structured output, middleware. |
 | [`02-agents/`](./02-agents) | LangGraph agents: hand-built `StateGraph` chatbots, tool loops, checkpointer memory, human-in-the-loop, plus MCP servers + client. |
-| [`NOTES.md`](./NOTES.md)    | The shared reference notes both folders point back to.                                              |
+| [`03-traditional-rag/`](./03-traditional-rag) | RAG from scratch: document loaders → chunking → embeddings → ChromaDB → semantic search → grounded generation. Has its own [`NOTES.md`](./03-traditional-rag/NOTES.md) (distinct domain). |
+| [`NOTES.md`](./NOTES.md)    | The shared reference notes `01-basics` and `02-agents` point back to (agents / LangGraph / async). |
 
-`01-basics` and `02-agents` are just topic folders — the whole repo is **one**
-[`uv`](https://docs.astral.sh/uv/) project with a single `pyproject.toml`,
-`uv.lock`, and `.venv` at the root.
+`01-basics`, `02-agents`, and `03-traditional-rag` are just topic folders — the whole
+repo is **one** [`uv`](https://docs.astral.sh/uv/) project with a single
+`pyproject.toml`, `uv.lock`, and `.venv` at the root.
 
 ## Setup
 

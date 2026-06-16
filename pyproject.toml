@@ -18,4 +18,14 @@ dependencies = [
     "langchain-tavily>=0.2.18",
     "langchain-mcp-adapters>=0.3.0",
     "mcp>=1.27.2",
+    # traditional RAG (03-traditional-rag): loaders, splitters, embeddings, vector stores
+    "langchain-community>=0.4.2",
+    "langchain-text-splitters>=1.1.2",
+    "sentence-transformers>=5.5.1",
+    "chromadb>=1.5.9",
+    "faiss-cpu>=1.14.3",
+    "pypdf>=6.13.2",
+    "pymupdf>=1.27.2.3",
+    "pandas>=3.0.3",
+    "openpyxl>=3.1.5",
 ]
