@@ -12,12 +12,16 @@
   free, OpenRouter free) for demos that need a stronger brain.
 - **Every project ships with an eval story.** "How do you know it got better?" is the
   #1 question juniors fail. Don't skip it.
+- **Learning AI and Python side-by-side.** Background is C# / Java (with a little Go
+  and JS); Python so far is only ~50+ LeetCode problems. Expect to learn Python
+  idioms and AI concepts at the same time — note language gaps to revisit as they
+  come up, and close them via [`PYTHON-SYLLABUS.md`](./PYTHON-SYLLABUS.md).
 
 **Status legend:** ⬜ Not started · 🟡 In progress · ✅ Shipped (deployed/demo-able)
 
 | # | Project | Status | Target window |
 | - | ------- | ------ | ------------- |
-| 0 | ReAct from scratch | ⬜ | 1–2 days |
+| 0 | ReAct from scratch | ✅ | 1–2 days |
 | 1 | Production RAG | ⬜ | 2–3 weeks |
 | 2 | Deep Research Agent | ⬜ | 2–3 weeks |
 | 3 | Market Data Research Agent | ⬜ | 2 weeks |
@@ -27,7 +31,7 @@ like magic.
 
 ---
 
-## Project 0 — ReAct Agent From Scratch  ⬜
+## Project 0 — ReAct Agent From Scratch  ✅
 
 **Goal:** Build the agent loop with **zero frameworks** (raw model API only) so you
 understand exactly what LangChain/LangGraph do under the hood.
@@ -49,6 +53,10 @@ parsing/control flow, "can you do it without a framework?"
 - [ ] You can explain every line cold
 
 **Stack:** raw model API via `get_model()`, Python stdlib. No LangChain.
+
+**Python to revisit (from this project):** `**kwargs`, `callable` / callables,
+decorators, and abstraction (ABCs / abstract methods) — see
+[`PYTHON-SYLLABUS.md`](./PYTHON-SYLLABUS.md) §1–2.
 
 ---
 
@@ -149,4 +157,4 @@ Project 0 loop), `get_model()`.
 - [ ] A short write-up per project on *trade-offs* you made (this is what seniors probe)
 - [ ] You can demo each live and explain any line on request
 
-*Companion file: [`SYLLABUS.md`](./SYLLABUS.md) — the knowledge map these projects prove.*
+*Companion files: [`SYLLABUS.md`](./SYLLABUS.md) — the AI knowledge map these projects prove · [`PYTHON-SYLLABUS.md`](./PYTHON-SYLLABUS.md) — the Python language gaps to close while building them.*

@@ -153,4 +153,4 @@ checked:
 
 ---
 
-*Companion file: [`PROJECTS.md`](./PROJECTS.md) — the portfolio that proves this syllabus.*
+*Companion files: [`PROJECTS.md`](./PROJECTS.md) — the portfolio that proves this syllabus · [`PYTHON-SYLLABUS.md`](./PYTHON-SYLLABUS.md) — the Python language gaps to close while building it.*
